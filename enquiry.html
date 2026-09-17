@@ -1,157 +1,147 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="images/quickfix-logo.png" />
     <title>QuickFix SA - Enquiry</title>
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
 
-</head>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<body>
-
+  <body>
     <!-- HEADER -->
 
     <header>
+      <img
+        src="images/quickfix-logo.png"
+        alt="QuickFix SA Logo"
+        width="150"
+        height="151"
+        class="logo"
+      />
 
-        <img src="images/QuickfixLogo.png" alt="QuickFix SA Logo" width="150">
+      <h1>QuickFix SA</h1>
 
-        <h1>QuickFix SA</h1>
-
-        <p>Property Services & Marketplace</p>
-
+      <p>Property Services & Marketplace</p>
     </header>
-
 
     <!--NAVIGATION-->
 
     <nav>
+      <!-- Hamburger button: only visible on mobile (see media query in style.css) -->
+      <button
+        class="nav-toggle"
+        aria-expanded="false"
+        aria-controls="nav-links"
+      >
+        &#9776; Menu
+      </button>
 
+      <div class="nav-links" id="nav-links">
         <a href="index.html">Home</a>
-
         <a href="about.html">About Us</a>
-
         <a href="services.html">Services</a>
-
         <a href="properties.html">Properties</a>
-
-        <a href="enquiry.html">Enquiry</a>
-
+        <a href="enquiry.html" aria-current="page">Enquiry</a>
         <a href="contact.html">Contact</a>
-
+      </div>
     </nav>
-
 
     <!--MAIN CONTENT-->
 
     <main>
+      <h2>Make an Enquiry</h2>
 
-        <h2>Make an Enquiry</h2>
-
+      <section>
         <p>
-        Complete the form below and tell us what
-            property service you require.
+          Complete the form below and tell us what property service you require.
         </p>
-
 
         <!-- ENQUIRY FORM -->
 
         <form>
-         <!--Name-->
-            <label for="name">
-            Full Name:
-            </label>
+          <!--Name-->
+          <label for="name"> Full Name: </label>
 
-            <br>
+          <input type="text" id="name" name="name" />
 
-            <input type="text" id="name" name="name">
+          <!--Email-->
+          <label for="email"> Email Address: </label>
 
-            <br><br>
+          <input type="email" id="email" name="email" />
 
-        <!--Email-->
-            <label for="email">
-                Email Address:
-            </label>
+          <!--Phone-->
+          <label for="phone"> Phone Number: </label>
 
-            <br>
+          <input type="tel" id="phone" name="phone" />
 
-            <input type="email" id="email" name="email">
+          <!-- Enquiry Type -->
+          <label for="enquiry-type"> Enquiry Type: </label>
 
-            <br><br>
+          <select id="enquiry-type" name="enquiry-type">
+            <option value="property">Property Enquiry</option>
 
-        <!--Phone-->
-            <label for="phone">
-                Phone Number:
-            </label>
+            <option value="repair">Repair Service</option>
 
-            <br>
+            <option value="general">General Enquiry</option>
+          </select>
 
-            <input type="tel" id="phone" name="phone">
+          <!-- Your Message -->
+          <label for="message"> Your Message: </label>
 
-            <br><br>
+          <textarea id="message" name="message" rows="6" cols="40"></textarea>
 
-
-            <!-- Enquiry Type -->
-            <label for="enquiry-type">
-                Enquiry Type:
-            </label>
-
-            <br>
-
-            <select id="enquiry-type" name="enquiry-type">
-
-                <option value="property">
-                    Property Enquiry
-                </option>
-
-                <option value="repair">
-                    Repair Service
-                </option>
-
-                <option value="general">
-                    General Enquiry
-                </option>
-
-            </select>
-
-            <br><br>
-
-
-            <!-- Your Message -->
-            <label for="message">
-                Your Message:
-            </label>
-
-            <br>
-
-            <textarea id="message"
-                      name="message"
-                      rows="6"
-                      cols="40"></textarea>
-
-            <br><br>
-
-
-            <input type="submit" value="Submit Enquiry">
-
+          <input type="submit" value="Submit Enquiry" />
         </form>
-
+      </section>
     </main>
-
 
     <!--FOOTER-->
 
     <footer>
+      <div class="footer-grid">
+        <div>
+          <h3>QuickFix SA</h3>
+          <p>Property Services &amp; Marketplace</p>
+          <p>
+            Helping South Africans find properties and connect with reliable
+            repair professionals.
+          </p>
+        </div>
 
-        <h3>QuickFix SA</h3>
+        <div>
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="properties.html">Properties</a></li>
+          </ul>
+        </div>
 
-        <p>Property Services & Marketplace</p>
+        <div>
+          <h3>Contact</h3>
+          <ul>
+            <li>Email: info@quickfixsa.co.za</li>
+            <li>Phone: 012 345 6789</li>
+            <li>10 Main Street, Johannesburg</li>
+            <li>20 Church Street, Pretoria</li>
+          </ul>
+        </div>
+      </div>
 
+      <div class="footer-bottom">
         <p>2026 QuickFix SA</p>
-
+      </div>
     </footer>
 
-</body>
-
+    <script src="js/script.js"></script>
+  </body>
 </html>

@@ -1,185 +1,203 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="images/quickfix-logo.png" />
     <title>QuickFix SA Properties</title>
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
 
-</head>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<body>
-
+  <body>
     <!--HEADER-->
 
     <header>
+      <img
+        src="images/quickfix-logo.png"
+        alt="QuickFix SA Logo"
+        width="150"
+        height="151"
+        class="logo"
+      />
 
-        <img src="images/QuickfixLogo.png.png"
-             alt="QuickFix SA Logo"
-             width="150">
+      <h1>QuickFix SA</h1>
 
-        <h1>QuickFix SA</h1>
-
-        <p>Property Services & Marketplace</p>
-
+      <p>Property Services & Marketplace</p>
     </header>
-
 
     <!--NAVIGATION-->
 
     <nav>
+      <!-- Hamburger button: only visible on mobile (see media query in style.css) -->
+      <button
+        class="nav-toggle"
+        aria-expanded="false"
+        aria-controls="nav-links"
+      >
+        &#9776; Menu
+      </button>
 
+      <div class="nav-links" id="nav-links">
         <a href="index.html">Home</a>
-
         <a href="about.html">About Us</a>
-
         <a href="services.html">Services</a>
-
-        <a href="properties.html">Properties</a>
-
+        <a href="properties.html" aria-current="page">Properties</a>
         <a href="enquiry.html">Enquiry</a>
-
         <a href="contact.html">Contact</a>
-
+      </div>
     </nav>
-
 
     <!-- MAIN CONTENT -->
 
     <main>
+      <h2>Properties For Sale</h2>
 
-        <h2>Properties For Sale</h2>
+      <p>Browse properties available for sale through QuickFix SA.</p>
 
-        <p>
-            Browse properties available for sale through
-            QuickFix SA.
-        </p>
-
-
+      <div class="card-grid">
         <!--PROPERTY 1-->
 
-        <section>
-        <img src="images/Property.jpg"
-         alt="Modern family home"
-         width="400">
+        <article class="card">
+          <img
+            src="images/property-1.jpg"
+            alt="Modern family home"
+            width="299"
+            height="168"
+            loading="lazy"
+          />
+          <div class="card-body">
             <h3>Modern Family Home</h3>
 
-            <p>
-                Location: Pretoria
-            </p>
+            <p>Location: Pretoria</p>
+
+            <p class="price">R1 200 000</p>
+
+            <p>Bedrooms: 3 &nbsp;|&nbsp; Bathrooms: 2</p>
 
             <p>
-                Price: R1 200 000
+              A modern family home with comfortable living spaces and a
+              convenient location.
             </p>
 
-            <p>
-                Bedrooms: 3
-            </p>
-
-            <p>
-                Bathrooms: 2
-            </p>
-
-            <p>
-                A modern family home with comfortable living
-                spaces and a convenient location.
-            </p>
-
-            <a href="enquiry.html">
-                Enquire About Property
+            <a href="enquiry.html" class="btn btn-sm">
+              Enquire About Property
             </a>
-
-        </section>
-
+          </div>
+        </article>
 
         <!--PROPERTY 2-->
 
-        <section>
-            <img src="images/Property2.jpg" 
+        <article class="card">
+          <img
+            src="images/property-2.jpg"
+            srcset="images/property-2-400w.jpg 400w, images/property-2.jpg 547w"
+            sizes="(max-width: 768px) 100vw, 340px"
             alt="Family townhouse"
-                width="400">
+            width="547"
+            height="365"
+            loading="lazy"
+          />
 
+          <div class="card-body">
             <h3>Family Townhouse</h3>
 
-            <p>
-                Location: Johannesburg
-            </p>
+            <p>Location: Johannesburg</p>
+
+            <p class="price">R950 000</p>
+
+            <p>Bedrooms: 2 &nbsp;|&nbsp; Bathrooms: 2</p>
 
             <p>
-                Price: R950 000
+              A comfortable townhouse suitable for a small family or young
+              professional.
             </p>
 
-            <p>
-                Bedrooms: 2
-            </p>
-
-            <p>
-                Bathrooms: 2
-            </p>
-
-            <p>
-                A comfortable townhouse suitable for a
-                small family or young professional.
-            </p>
-
-            <a href="enquiry.html">
-                Enquire About Property
+            <a href="enquiry.html" class="btn btn-sm">
+              Enquire About Property
             </a>
-
-        </section>
-
+          </div>
+        </article>
 
         <!--PROPERTY 3-->
 
-        <section>
-            <img src="images/Property3.jpg"
+        <article class="card">
+          <img
+            src="images/property-3.jpg"
+            srcset="images/property-3-400w.jpg 400w, images/property-3.jpg 678w"
+            sizes="(max-width: 768px) 100vw, 340px"
             alt="Three bedroom home"
-                width="400">
+            width="678"
+            height="452"
+            loading="lazy"
+          />
+          <div class="card-body">
             <h3>Three Bedroom Home</h3>
 
-            <p>
-                Location: Centurion
-            </p>
+            <p>Location: Centurion</p>
+
+            <p class="price">R1 450 000</p>
+
+            <p>Bedrooms: 3 &nbsp;|&nbsp; Bathrooms: 2</p>
 
             <p>
-                Price: R1 450 000
+              A spacious property suitable for a family looking for a
+              comfortable home.
             </p>
 
-            <p>
-                Bedrooms: 3
-            </p>
-
-            <p>
-                Bathrooms: 2
-            </p>
-
-            <p>
-                A spacious property suitable for a family
-                looking for a comfortable home.
-            </p>
-
-            <a href="enquiry.html">
-                Enquire About Property
+            <a href="enquiry.html" class="btn btn-sm">
+              Enquire About Property
             </a>
-
-        </section>
-
+          </div>
+        </article>
+      </div>
     </main>
-
 
     <!--FOOTER-->
 
     <footer>
+      <div class="footer-grid">
+        <div>
+          <h3>QuickFix SA</h3>
+          <p>Property Services &amp; Marketplace</p>
+          <p>
+            Helping South Africans find properties and connect with reliable
+            repair professionals.
+          </p>
+        </div>
 
-        <h3>QuickFix SA</h3>
+        <div>
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="properties.html">Properties</a></li>
+          </ul>
+        </div>
 
-        <p>Property Services & Marketplace</p>
+        <div>
+          <h3>Contact</h3>
+          <ul>
+            <li>Email: info@quickfixsa.co.za</li>
+            <li>Phone: 012 345 6789</li>
+            <li>10 Main Street, Johannesburg</li>
+            <li>20 Church Street, Pretoria</li>
+          </ul>
+        </div>
+      </div>
 
+      <div class="footer-bottom">
         <p>2026 QuickFix SA</p>
-
+      </div>
     </footer>
 
-</body>
-
+    <script src="js/script.js"></script>
+  </body>
 </html>

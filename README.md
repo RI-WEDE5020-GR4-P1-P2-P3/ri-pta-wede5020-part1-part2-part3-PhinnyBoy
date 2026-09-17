@@ -99,36 +99,225 @@ JavaScript is included in the project for future interactive functionality such 
 
 ---
 
-## Project Folder Structure
+## Project Structure
 
-The project is organised into separate folders for the website files.
+```
+quickfix-sa/
+├── index.html          Home page
+├── about.html          About Us
+├── services.html       Repair services
+├── properties.html     Properties for sale
+├── enquiry.html        Enquiry form
+├── contact.html        Contact details and contact form
+├── css/
+│   └── style.css       External stylesheet (all pages link to this)
+├── images/             Logo, hero image, property and service photos
+├── js/
+│   └── script.js       Mobile navigation menu toggle
+└── screenshots/        Responsive testing evidence
+```
 
-```text
-QuickFix-SA
-│
-├── README.md
-│
-├── index.html
-├── about.html
-├── services.html
-├── properties.html
-├── enquiry.html
-├── contact.html
-│
-├── css
-│   └── style.css
-│
-├── js
-│   └── script.js
-│
-└── images
-    ├── quickfix-logo.png
-    ├── hero.jpg
-    ├── property1.jpg
-    ├── property2.jpg
-    ├── property3.jpg
-    ├── plumber.jpg
-    ├── electrician.jpg
-    ├── appliance-repair.jpg
-    ├── carpenter.jpg
-    └── locksmith.jpg
+---
+
+## Part 2: CSS Styling and Responsive Design
+
+### External Stylesheet
+
+All six pages link to one external stylesheet, `css/style.css`, using:
+
+```html
+<link rel="stylesheet" href="css/style.css">
+```
+
+The stylesheet is organised into eight commented sections so each
+requirement is easy to locate:
+
+| Section | What it covers |
+|---------|----------------|
+| 1. CSS Custom Properties | Colours, spacing, fonts, shadows defined once in `:root` |
+| 2. Reset & Base Styles | `box-sizing: border-box`, margin/padding reset, default body styles |
+| 3. Typography | Heading and body font families, sizes, weights, line heights |
+| 4. Header, Navigation & Footer | Sticky navigation, header and footer layout |
+| 5. Main Layout Structure | Flexbox and CSS Grid layouts |
+| 6. Components | Buttons, cards and forms |
+| 7. Decoration, Colour & Pseudo-Classes | `:hover`, `:focus-visible`, `:active` states |
+| 8. Responsive Design | Media queries for tablet, mobile and small mobile |
+
+### Consistent Visual Identity
+
+The same design system is applied to every page through CSS custom
+properties, so nothing is styled page-by-page:
+
+- **Colours:** navy `#123c4a` (header/footer), green `#167a5a` (navigation),
+  gold `#f2c94c` (highlights), with a light neutral `#f2f6f7` for backgrounds.
+- **Typography:** Poppins for headings, Inter for body text (Google Fonts),
+  sized with a `rem`-based scale.
+- **Spacing:** a shared spacing scale (`--space-xs` through `--space-xl`)
+  used for all padding and margins.
+- **Borders and backgrounds:** consistent card treatment — white background,
+  1px border, 12px radius and a soft shadow.
+- **Navigation:** identical on every page, with the current page highlighted
+  using `aria-current="page"`.
+
+### Desktop Layout
+
+- **Flexbox** is used for the header, navigation bar, the two-column hero
+  section on the home page, and the forms.
+- **CSS Grid** is used for the property and service card layouts
+  (`repeat(auto-fit, minmax(280px, 1fr))`) and for the three-column footer.
+- **Hover, focus and active effects** are applied to navigation links,
+  buttons, cards, list items and all form fields. `:focus-visible` is used
+  so keyboard users get a clear gold outline.
+
+### Responsive Design
+
+Three breakpoints are used, working down from the desktop layout:
+
+| Breakpoint | Screen | Main adjustments |
+|------------|--------|------------------|
+| `max-width: 1024px` | Tablet | Two-column split becomes single column, card grid tightens, footer drops to two columns, headings scale down |
+| `max-width: 768px` | Mobile | Navigation collapses into a hamburger menu, card grid becomes one column, hero stacks and centres, footer stacks to one column |
+| `max-width: 480px` | Small mobile | Root font size scales down, buttons go full width, card images shorten |
+
+Relative units are used throughout — `rem` for typography and spacing,
+`%` and `fr` for widths, and `vw` in the image `sizes` attributes.
+
+### Responsive Images
+
+- Every image uses `max-width: 100%` and `height: auto`, so nothing
+  overflows the page.
+- The hero, property and service images use `srcset` and `sizes` so smaller
+  screens download smaller files. For example:
+
+```html
+<img src="images/hero-1200w.jpg"
+     srcset="images/hero-480w.jpg 480w,
+             images/hero-800w.jpg 800w,
+             images/hero-1200w.jpg 1200w"
+     sizes="(max-width: 768px) 100vw, 600px"
+     alt="Modern home" width="1200" height="655">
+```
+
+- `loading="lazy"` is applied to below-the-fold images.
+- Card images use `object-fit: cover` with a fixed height so the grid stays
+  tidy even though the source photos have different aspect ratios.
+
+---
+
+## Responsive Testing Evidence
+
+Tested in Google Chrome Developer Tools using the device toolbar
+(Ctrl + Shift + M) at desktop, tablet and mobile sizes.
+
+### Desktop (1440px)
+
+![Desktop home page](screenshots/desktop-home.png)
+
+![Desktop services page](screenshots/desktop-services.png)
+
+![Desktop properties page](screenshots/desktop-properties.png)
+
+### Tablet (820px — iPad Air)
+
+The two-column content splits into a single column and the footer drops from
+three columns to two.
+
+![Tablet home page](screenshots/tablet-home.png)
+
+![Tablet services page](screenshots/tablet-services.png)
+
+### Mobile (390px — iPhone 12/13)
+
+The navigation collapses into a hamburger menu, cards become a single
+column, and all images resize to fit the screen.
+
+![Mobile home page](screenshots/mobile-home.png)
+
+![Mobile services page](screenshots/mobile-services.png)
+
+![Mobile navigation menu open](screenshots/mobile-menu-open.png)
+
+---
+
+## Changelog
+
+### Part 2 — CSS Styling and Responsive Design
+
+**Corrections made from Part 1 feedback**
+
+- **Fixed broken image file paths.** The logo was referenced three different
+  ways across pages (`images/QuickfixLogo.png.png`, `images/QuickfixLogo.png`)
+  and the hero image path (`images/Hero.png.jpg`) did not match any real file,
+  so images were not displaying. All image files were renamed to a consistent
+  lowercase convention (`quickfix-logo.png`, `hero-1200w.jpg`,
+  `property-1.jpg`, `service-plumbing.jpg`) and every reference was updated.
+- **Added missing `<meta charset="UTF-8">`** to all six pages so special
+  characters render correctly in every browser.
+- **Added missing `<meta name="viewport" content="width=device-width,
+  initial-scale=1.0">`** to all six pages. Without this tag mobile browsers
+  ignore media queries entirely and render the desktop layout zoomed out,
+  so responsive design could not work without it.
+- **Added `lang="en"` to the `<html>` element** on every page for
+  accessibility and validation.
+- **Optimised oversized images.** The electrician photo was 519 KB; it was
+  resized and recompressed to 63 KB with no visible quality loss, and all
+  other photos were compressed to reduce page load time.
+- **Corrected the misspelt image filename** `logsmith.jpg` to
+  `service-locksmith.jpg`.
+
+**New work for Part 2**
+
+- Added a complete external stylesheet (`css/style.css`) with a CSS reset,
+  custom properties, typography scale, layout system, components and
+  interaction states.
+- Added Google Fonts (Poppins and Inter) with a system font fallback stack.
+- Built the desktop layout using Flexbox (header, navigation, hero, forms)
+  and CSS Grid (card layouts, footer).
+- Added `:hover`, `:focus-visible` and `:active` states to every link,
+  button, card and form field.
+- Added three responsive breakpoints (1024px, 768px, 480px) that adjust
+  layout, typography, navigation and images.
+- Restructured the property and service listings into semantic
+  `<article class="card">` elements inside a `<div class="card-grid">`
+  container so they lay out as a responsive grid.
+- Restructured the home page hero into a two-column Flexbox layout that
+  stacks on smaller screens.
+- Added a collapsible hamburger navigation menu for mobile
+  (`js/script.js`), with a no-JavaScript fallback that leaves the menu open.
+- Added current-page highlighting in the navigation using `aria-current`.
+- Rebuilt the footer as a three-column grid (brand, quick links, contact)
+  that stacks to one column on mobile.
+- Added `srcset`, `sizes` and `loading="lazy"` to content images, with
+  400w/480w/800w/1200w variants generated for each photo.
+- Added a favicon using the QuickFix SA logo.
+- Removed `<br>` tags from the forms — spacing is now handled by CSS
+  (`display: flex` with `gap`), which keeps the markup clean.
+- Added responsive testing screenshots to this README.
+
+---
+
+## References
+
+Google Fonts. 2026. *Poppins and Inter typefaces*. [Online]. Available at:
+https://fonts.google.com [Accessed 17 September 2026].
+
+Mozilla Developer Network. 2026. *CSS Grid Layout*. [Online]. Available at:
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout
+[Accessed 17 September 2026].
+
+Mozilla Developer Network. 2026. *CSS Flexible Box Layout*. [Online].
+Available at:
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout
+[Accessed 17 September 2026].
+
+Mozilla Developer Network. 2026. *Responsive images*. [Online]. Available at:
+https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Responsive_images
+[Accessed 17 September 2026].
+
+Mozilla Developer Network. 2026. *Using media queries*. [Online]. Available
+at: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries
+[Accessed 17 September 2026].
+
+W3Schools. 2026. *CSS Variables — The var() Function*. [Online]. Available
+at: https://www.w3schools.com/css/css3_variables.asp
+[Accessed 17 September 2026].

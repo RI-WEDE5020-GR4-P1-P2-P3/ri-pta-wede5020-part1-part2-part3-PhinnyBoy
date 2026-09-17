@@ -1,194 +1,173 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="images/quickfix-logo.png" />
     <title>QuickFix SA - Contact</title>
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
 
-</head>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<body>
-
+  <body>
     <!-- HEADER -->
 
     <header>
+      <img
+        src="images/quickfix-logo.png"
+        alt="QuickFix SA Logo"
+        width="150"
+        height="151"
+        class="logo"
+      />
 
-        <img src="images/QuickfixLogo.png.png"
-             alt="QuickFix SA Logo"
-             width="150">
+      <h1>QuickFix SA</h1>
 
-        <h1>QuickFix SA</h1>
-
-        <p>Property Services & Marketplace</p>
-
+      <p>Property Services & Marketplace</p>
     </header>
-
 
     <!-- Navigation-->
 
     <nav>
+      <!-- Hamburger button: only visible on mobile (see media query in style.css) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">
+        &#9776; Menu
+      </button>
 
+      <div class="nav-links" id="nav-links">
         <a href="index.html">Home</a>
-
         <a href="about.html">About Us</a>
-
         <a href="services.html">Services</a>
-
         <a href="properties.html">Properties</a>
-
         <a href="enquiry.html">Enquiry</a>
-
-        <a href="contact.html">Contact</a>
-
+        <a href="contact.html" aria-current="page">Contact</a>
+      </div>
     </nav>
-
 
     <!--Main Content-->
 
     <main>
+      <h2>Contact Us</h2>
 
-        <h2>Contact Us</h2>
+      <p>
+        Contact QuickFix SA if you have questions about our properties or repair
+        services.
+      </p>
 
-        <p>
-            Contact QuickFix SA if you have questions about
-            our properties or repair services.
-        </p>
+      <!--JOHANNESBURG OFFICE-->
 
+      <section>
+        <h3>Johannesburg Office</h3>
 
-        <!--JOHANNESBURG OFFICE-->
+        <p>Address: 10 Main Street, Johannesburg, Gauteng</p>
 
-        <section>
+        <p>Phone: 011 345 6789</p>
 
-            <h3>Johannesburg Office</h3>
+        <p>Email: info@quickfixsa.co.za</p>
+      </section>
 
-            <p>
-                Address: 10 Main Street, Johannesburg, Gauteng
-            </p>
+      <!--PRETORIA OFFICE-->
 
-            <p>
-                Phone: 011 345 6789
-            </p>
+      <section>
+        <h3>Pretoria Office</h3>
 
-            <p>
-                Email: info@quickfixsa.co.za
-            </p>
+        <p>Address: 20 Church Street, Pretoria, Gauteng</p>
 
-        </section>
+        <p>Phone: 012 345 6789</p>
 
+        <p>Email: pretoria@quickfixsa.co.za</p>
+      </section>
 
-        <!--PRETORIA OFFICE-->
+      <!-- MAP -->
 
-        <section>
+      <section>
+        <h3>Find Us</h3>
 
-            <h3>Pretoria Office</h3>
+        <p>Our offices are available in Johannesburg and Pretoria.</p>
 
-            <p>
-                Address: 20 Church Street, Pretoria, Gauteng
-            </p>
+        <!-- Map will be added during the next Part -->
 
-            <p>
-                Phone: 012 345 6789
-            </p>
+        <div class="map-placeholder">
+          <p>Map Placeholder</p>
+        </div>
+      </section>
 
-            <p>
-                Email: pretoria@quickfixsa.co.za
-            </p>
+      <!-- CONTACT FORM-->
 
-        </section>
+      <section>
+        <h3>Send Us a Message</h3>
 
+        <form>
+          <!--Name-->
+          <label for="contact-name"> Name: </label>
 
-        <!-- MAP -->
+          <input type="text" id="contact-name" name="contact-name" />
 
-        <section>
+          <!--Email-->
+          <label for="contact-email"> Email: </label>
 
-            <h3>Find Us</h3>
+          <input type="email" id="contact-email" name="contact-email" />
 
-            <p>
-                Our offices are available in Johannesburg
-                and Pretoria.
-            </p>
+          <!--Message-->
+          <label for="contact-message"> Message: </label>
 
-            <!-- Map will be added during the next Part -->
+          <textarea
+            id="contact-message"
+            name="contact-message"
+            rows="5"
+            cols="40"
+          ></textarea>
 
-            <p>
-                Map Placeholder
-            </p>
-
-        </section>
-
-
-        <!-- CONTACT FORM-->
-
-        <section>
-
-            <h3>Send Us a Message</h3>
-
-            <form>
-               <!--Name-->
-                <label for="contact-name">
-                    Name:
-                </label>
-
-                <br>
-
-                <input type="text"
-                       id="contact-name"
-                       name="contact-name">
-
-                <br><br>
-
-                <!--Email-->
-                <label for="contact-email">
-                    Email:
-                </label>
-
-                <br>
-
-                <input type="email"
-                       id="contact-email"
-                       name="contact-email">
-
-                <br><br>
-
-                <!--Message-->
-                <label for="contact-message">
-                    Message:
-                </label>
-
-                <br>
-
-                <textarea id="contact-message"
-                          name="contact-message"
-                          rows="5"
-                          cols="40"></textarea>
-
-                <br><br>
-
-
-                <input type="submit"
-                       value="Send Message">
-
-            </form>
-
-        </section>
-
+          <input type="submit" value="Send Message" />
+        </form>
+      </section>
     </main>
-
 
     <!--FOOTER-->
 
     <footer>
+      <div class="footer-grid">
+        <div>
+          <h3>QuickFix SA</h3>
+          <p>Property Services &amp; Marketplace</p>
+          <p>
+            Helping South Africans find properties and connect with reliable
+            repair professionals.
+          </p>
+        </div>
 
-        <h3>QuickFix SA</h3>
+        <div>
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="properties.html">Properties</a></li>
+          </ul>
+        </div>
 
-        <p>Property Services & Marketplace</p>
+        <div>
+          <h3>Contact</h3>
+          <ul>
+            <li>Email: info@quickfixsa.co.za</li>
+            <li>Phone: 012 345 6789</li>
+            <li>10 Main Street, Johannesburg</li>
+            <li>20 Church Street, Pretoria</li>
+          </ul>
+        </div>
+      </div>
 
+      <div class="footer-bottom">
         <p>2026 QuickFix SA</p>
-
+      </div>
     </footer>
 
-</body>
-
+    <script src="js/script.js"></script>
+  </body>
 </html>

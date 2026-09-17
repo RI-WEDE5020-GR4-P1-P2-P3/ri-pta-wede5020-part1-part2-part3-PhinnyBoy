@@ -1,170 +1,182 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="images/quickfix-logo.png" />
     <title>QuickFix SA - About Us</title>
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
 
-</head>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<body>
-
+  <body>
     <!--HEADER-->
 
     <header>
+      <img
+        src="images/quickfix-logo.png"
+        alt="QuickFix SA Logo"
+        width="150"
+        height="151"
+        class="logo"
+      />
 
-        <img src="images/QuickfixLogo.png.png"
+      <h1>QuickFix SA</h1>
 
-         alt="QuickFix SA Logo"width="150">
-
-        <h1>QuickFix SA</h1>
-
-        <p>Property Services & Marketplace</p>
-
+      <p>Property Services & Marketplace</p>
     </header>
-
 
     <!-- NAVIGATION -->
 
     <nav>
+      <!-- Hamburger button: only visible on mobile (see media query in style.css) -->
+      <button
+        class="nav-toggle"
+        aria-expanded="false"
+        aria-controls="nav-links"
+      >
+        &#9776; Menu
+      </button>
 
+      <div class="nav-links" id="nav-links">
         <a href="index.html">Home</a>
-
-        <a href="about.html">About Us</a>
-
+        <a href="about.html" aria-current="page">About Us</a>
         <a href="services.html">Services</a>
-
         <a href="properties.html">Properties</a>
-
         <a href="enquiry.html">Enquiry</a>
-
         <a href="contact.html">Contact</a>
-
+      </div>
     </nav>
-
 
     <!--MAIN CONTENT-->
 
     <main>
+      <h2>About QuickFix SA</h2>
 
-        <h2>About QuickFix SA</h2>
+      <!--HISTORY-->
 
+      <section>
+        <h3>Our History</h3>
 
-        <!--HISTORY-->
+        <p>
+          QuickFix SA is a fictional South African property services company
+          created to make property-related services easier to access.
+        </p>
 
-        <section>
+        <p>
+          The idea was created because tenants, homeowners and property owners
+          can sometimes struggle to find reliable professionals when property
+          problems occur.
+        </p>
 
-            <h3>Our History</h3>
+        <p>
+          QuickFix SA also provides a property marketplace where users can
+          discover properties available for sale.
+        </p>
+      </section>
 
-            <p>
-              QuickFix SA is a fictional South African property
-              services company created to make property-related
-              services easier to access.
-            </p>
+      <!-- MISSION -->
 
-            <p>
-             The idea was created because tenants, homeowners
-             and property owners can sometimes struggle to find
-             reliable professionals when property problems occur.
-            </p>
+      <section>
+        <h3>Our Mission</h3>
 
-            <p>
-             QuickFix SA also provides a property marketplace
-             where users can discover properties available for sale.
-            </p>
+        <p>
+          Our mission is to make finding properties and solving property
+          maintenance problems faster, easier and more convenient.
+        </p>
+      </section>
 
-        </section>
+      <!-- VISION -->
 
+      <section>
+        <h3>Our Vision</h3>
 
-        <!-- MISSION -->
+        <p>
+          Our vision is to become a trusted South African online platform for
+          discovering properties and accessing reliable property maintenance
+          services.
+        </p>
+      </section>
 
-        <section>
+      <!-- TARGET AUDIENCE -->
 
-            <h3>Our Mission</h3>
+      <section>
+        <h3>Who We Serve</h3>
 
-            <p>
+        <ul>
+          <li>Property buyers</li>
 
-            Our mission is to make finding properties and solving
-            property maintenance problems faster, easier and more
-            convenient.
-            </p>
+          <li>Tenants</li>
 
-        </section>
+          <li>Homeowners</li>
 
+          <li>Landlords</li>
 
-        <!-- VISION -->
+          <li>Property sellers</li>
 
-        <section>
+          <li>Repair professionals</li>
 
+          <li>Small businesses</li>
+        </ul>
+      </section>
 
-            <h3>Our Vision</h3>
+      <!--TEAM-->
 
-            <p>
-            Our vision is to become a trusted South African
-            online platform for discovering properties and
-            accessing reliable property maintenance services.
-            </p>
+      <section>
+        <h3>Our Team</h3>
 
-        </section>
-
-
-        <!-- TARGET AUDIENCE -->
-
-        <section>
-
-            <h3>Who We Serve</h3>
-
-            <ul>
-
-             <li>Property buyers</li>
-
-             <li>Tenants</li>
-
-             <li>Homeowners</li>
-
-             <li>Landlords</li>
-
-             <li>Property sellers</li>
-
-             <li>Repair professionals</li>
-
-             <li>Small businesses</li>
-
-            </ul>
-
-        </section>
-
-
-        <!--TEAM-->
-
-        <section>
-
-            <h3>Our Team</h3>
-
-            <p>
-            QuickFix SA is supported by a team responsible for
-            customer support, property listings, service providers
-            and website administration.
-            </p>
-
-        </section>
-
+        <p>
+          QuickFix SA is supported by a team responsible for customer support,
+          property listings, service providers and website administration.
+        </p>
+      </section>
     </main>
 
     <!--FOOTER-->
 
     <footer>
+      <div class="footer-grid">
+        <div>
+          <h3>QuickFix SA</h3>
+          <p>Property Services &amp; Marketplace</p>
+          <p>
+            Helping South Africans find properties and connect with reliable
+            repair professionals.
+          </p>
+        </div>
 
-    <h3>QuickFix SA</h3>
+        <div>
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="properties.html">Properties</a></li>
+          </ul>
+        </div>
 
-    <p>Property Services & Marketplace</p>
+        <div>
+          <h3>Contact</h3>
+          <ul>
+            <li>Email: info@quickfixsa.co.za</li>
+            <li>Phone: 012 345 6789</li>
+            <li>10 Main Street, Johannesburg</li>
+            <li>20 Church Street, Pretoria</li>
+          </ul>
+        </div>
+      </div>
 
-    <p>2026 QuickFix SA</p>
-
+      <div class="footer-bottom">
+        <p>2026 QuickFix SA</p>
+      </div>
     </footer>
 
-</body>
-
+    <script src="js/script.js"></script>
+  </body>
 </html>
