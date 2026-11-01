@@ -1,0 +1,6 @@
+# QuickFix SA Robots.txt File
+User-agent: *
+Allow: /
+
+# Point crawlers to the sitemap
+Sitemap: https://www.quickfixsa.co.za/sitemap.xml

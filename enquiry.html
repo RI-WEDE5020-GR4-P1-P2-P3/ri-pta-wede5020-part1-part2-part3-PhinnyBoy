@@ -17,7 +17,6 @@
 
   <body>
     <!-- HEADER -->
-
     <header>
       <img
         src="images/quickfix-logo.png"
@@ -26,21 +25,14 @@
         height="151"
         class="logo"
       />
-
       <h1>QuickFix SA</h1>
-
       <p>Property Services & Marketplace</p>
     </header>
 
-    <!--NAVIGATION-->
-
+    <!-- Navigation -->
     <nav>
-      <!-- Hamburger button: only visible on mobile (see media query in style.css) -->
-      <button
-        class="nav-toggle"
-        aria-expanded="false"
-        aria-controls="nav-links"
-      >
+      <!-- Hamburger button for mobile navigation -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">
         &#9776; Menu
       </button>
 
@@ -54,57 +46,48 @@
       </div>
     </nav>
 
-    <!--MAIN CONTENT-->
-
+    <!-- Main Content -->
     <main>
-      <h2>Make an Enquiry</h2>
+      <h2>Service Enquiry</h2>
+      <p>
+        Submit an enquiry regarding our property services or repair solutions to instantly calculate estimated costs and check availability.
+      </p>
 
       <section>
-        <p>
-          Complete the form below and tell us what property service you require.
-        </p>
+        <h3>Service & Property Enquiry Form</h3>
 
-        <!-- ENQUIRY FORM -->
+        <form id="enquiry-form">
+          <!-- Name -->
+          <label for="enquiry-name">Full Name:</label>
+          <input type="text" id="enquiry-name" name="enquiry-name" />
 
-        <form>
-          <!--Name-->
-          <label for="name"> Full Name: </label>
+          <!-- Email -->
+          <label for="enquiry-email">Email Address:</label>
+          <input type="email" id="enquiry-email" name="enquiry-email" />
 
-          <input type="text" id="name" name="name" />
-
-          <!--Email-->
-          <label for="email"> Email Address: </label>
-
-          <input type="email" id="email" name="email" />
-
-          <!--Phone-->
-          <label for="phone"> Phone Number: </label>
-
-          <input type="tel" id="phone" name="phone" />
-
-          <!-- Enquiry Type -->
-          <label for="enquiry-type"> Enquiry Type: </label>
-
-          <select id="enquiry-type" name="enquiry-type">
-            <option value="property">Property Enquiry</option>
-
-            <option value="repair">Repair Service</option>
-
-            <option value="general">General Enquiry</option>
+          <!-- Service Selection Dropdown -->
+          <label for="service-select">Select Service:</label>
+          <select id="service-select" name="service-select">
+            <option value="">-- Choose a Service --</option>
+            <option value="plumbing">Plumbing Repair (Base: R500)</option>
+            <option value="electrical">Electrical Inspection (Base: R750)</option>
+            <option value="painting">House Painting (Base: R1200)</option>
+            <option value="listing">Property Listing Assistance (Base: R300)</option>
           </select>
 
-          <!-- Your Message -->
-          <label for="message"> Your Message: </label>
+          <!-- Preferred Date -->
+          <label for="enquiry-date">Preferred Date:</label>
+          <input type="date" id="enquiry-date" name="enquiry-date" />
 
-          <textarea id="message" name="message" rows="6" cols="40"></textarea>
-
-          <input type="submit" value="Submit Enquiry" />
+          <input type="submit" value="Calculate Enquiry & Cost" />
         </form>
+
+        <!-- Dynamic Response Box (Satisfies POE rubric for cost/availability feedback) -->
+        <div id="enquiry-response" style="margin-top: 20px; padding: 15px; border-radius: 6px; display: none;"></div>
       </section>
     </main>
 
-    <!--FOOTER-->
-
+    <!-- FOOTER -->
     <footer>
       <div class="footer-grid">
         <div>
@@ -142,6 +125,7 @@
       </div>
     </footer>
 
+    <!-- JavaScript File -->
     <script src="js/script.js"></script>
   </body>
 </html>

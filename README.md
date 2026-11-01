@@ -295,6 +295,27 @@ column, and all images resize to fit the screen.
 - Added responsive testing screenshots to this README.
 
 ---
+##QuickFix SA – Part 3 Submission
+
+Project Overview
+
+QuickFix SA is a website that helps people in South Africa find properties and reliable service providers. Users can view property listings and find professionals such as plumbers, electricians and other repair services. This project was developed for the Web Development (WEDE5020) module.
+
+Changelog – Part 3 and Lecturer Feedback
+
+Part 3 Improvements
+
+The following improvements were made to the website for Part 3. I also used the feedback from my lecturer to improve the website.
+
+Interactive Map: I replaced the map placeholder on the contact.html page with an interactive map using Leaflet.js. The map shows the QuickFix SA office at 20 Church Street, Pretoria.
+
+Form Validation: I added JavaScript validation to the contact and enquiry forms. This checks that users enter the correct information, complete required fields and use a valid email address.
+
+Cost and Availability Calculator: I added JavaScript to the enquiry.html page to calculate estimated service costs and turnaround times based on the user's selections.
+
+SEO Improvements: I added robots.txt and sitemap.xml files to help search engines find and understand the website's pages.
+
+Responsive Navigation: I added a hamburger menu using JavaScript to make the website easier to navigate on smaller screens and mobile devices.
 
 ## References
 
@@ -321,3 +342,10 @@ at: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_med
 W3Schools. 2026. *CSS Variables — The var() Function*. [Online]. Available
 at: https://www.w3schools.com/css/css3_variables.asp
 [Accessed 17 September 2026].
+MDN Web Docs. 2026. JavaScript Guide. Available at: https://developer.mozilla.org/ [Accessed: 1 November 2026].
+
+Leaflet. 2026. Quick Start Guide. Available at: https://leafletjs.com/ [Accessed: 26 October 2026].
+
+The Independent Institute of Education. 2026. WEDE5020 Study Guide.
+
+OpenStreetMap Contributors. 2026. OpenStreetMap. Available at: https://www.openstreetmap.org/ [Accessed: 27 October 2027].
